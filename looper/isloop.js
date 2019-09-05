@@ -2,7 +2,20 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
+  let dictionary = {}
+  let temp = linkedlist.head;
+  while (temp.next !== null) {
 
+    if (!dictionary[temp.value]) {
+      dictionary[temp.value] = 1
+    } else {
+      // console.log()
+      return true
+    }
+
+    temp = temp.next
+  }
+  return false
 };
 
 

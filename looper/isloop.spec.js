@@ -12,12 +12,12 @@ const emojis = ['🥚','🐣','🦅 ', '👾'];
 const test1 = new LinkedList();
 test1.addToHead(0)
 numbers.forEach(val => test1.addToTail(val));
-test1.getNthNode(6).next = test1.getNthNode(3);
+test1.getNthNode(6).next = test1.getNthNode(5);
 
 const test2 = new LinkedList();
 test2.addToHead('z');
 letters.forEach(letter => test2.addToTail(letter));
-test2.getNthNode(9).next = test2.getNthNode(1);
+test2.getNthNode(9).next = test2.getNthNode(3);
 
 // This LL has no loop!
 const test3 = new LinkedList();
@@ -25,7 +25,7 @@ test3.addToHead('📺');
 emojis.forEach(el => test3.addToTail(el))
 
 describe('isLoop function', () => {
-	
+
 	// Feel free to write a few tests of your own! :)
 	it('returns true if linked list contains a loop', () =>{
 		expect(isLoop(test1)).to.equal(true);
